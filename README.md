@@ -30,27 +30,28 @@ The two means are statistically similar
 
 The p-value is above the significance level and so the mean of the total lot PSI is statistically similar to the population mean
 
-![T-Test for All Three Lots](images\t-test_all_lots.png)
+![T-Test for All Three Lots](./images/t-test_all_lots.png)
 
 #### Lot 1
 
 The p-value is above the significance level and so the mean of the lot1 PSI is statistically similar to the population mean
 
-![T-Test for Lot 1](images\t-test_lot_1.png)
+![T-Test for Lot 1](./images/t-test_lot_1.png)
 
 #### Lot 2
 
 The p-value is above the significance level and so the mean of the lot2 PSI is statistically similar to the population mean
 
-![T-Test for Lot 2](images\t-test_lot_2.png)
+![T-Test for Lot 2](./images/t-test_lot_2.png)
 
 #### Lot 3
 
 The p-value is below the significance level and so the mean of the lot3 PSI is not statistically similar to the population mean
 
-![T-Test for Lot 3](images\t-test_lot_3.png)
+![T-Test for Lot 3](./images/t-test_lot_3.png)
 
 
 
 ## Study Design: MechaCar vs Competition
 
+xxx
