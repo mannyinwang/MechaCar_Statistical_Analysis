@@ -1,0 +1,75 @@
+---
+title: "Mecha Car Analysis"
+output: html_notebook
+---
+
+
+### Importing the Dependencies
+```{r}
+library(tidyverse)
+
+```
+
+### Loading in the Dataset
+```{r}
+
+mecha <- read.csv("datasets/MechaCar_mpg.csv", stringsAsFactors = F, check.names = F)
+suspension_coil <-  read.csv("datasets/Suspension_Coil.csv", stringsAsFactors = F, check.names = F)
+
+# Check the Mecha Car data Structure
+glimpse(mecha)
+
+# Check the Suspension Coil data Structure
+glimpse(suspension_coil)
+
+```
+
+### Multiple Linear Regression Model Creation and Analysis
+
+```{r}
+# Creating the model
+mecha_model <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, mecha)
+mecha_summary <- summary(mecha_model)
+mecha_summary
+
+```
+
+### Suspension Coil Summary Analysis
+```{r}
+# Calculating the total summary
+total_summary <- suspension_coil %>% 
+  summarise(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI), .groups = "keep")
+total_summary
+
+# Calculating the summary per lot
+lot_statistics <- suspension_coil %>% 
+  group_by(Manufacturing_Lot) %>% 
+  summarise(Mean = mean(PSI), Median = median(PSI), Variance = var(PSI), SD = sd(PSI), .groups = "keep")
+lot_statistics
+```
+
+### T-Test on Suspension Coils
+```{r}
+Overall_t_test <- t.test(suspension_coil$PSI, mu = 1500)
+Overall_t_test
+
+# Lot1 T.Test Suspension Coil PSI 
+lot1 <- suspension_coil %>% 
+  filter(Manufacturing_Lot == "Lot1")
+lot1_t_test <- t.test(lot1$PSI, mu = 1500)
+lot1_t_test
+
+# Lot2 T.Test Suspension Coil PSI 
+lot2 <- suspension_coil %>% 
+  filter(Manufacturing_Lot == "Lot2")
+lot2_t_test <- t.test(lot2$PSI, mu = 1500)
+lot2_t_test
+
+# Lot3 T.Test Suspension Coil PSI 
+lot3 <- suspension_coil %>% 
+  filter(Manufacturing_Lot == "Lot3")
+lot3_t_test <- t.test(lot3$PSI, mu = 1500)
+lot3_t_test
+
+```
+
