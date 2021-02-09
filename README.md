@@ -54,4 +54,46 @@ The p-value is below the significance level and so the mean of the lot3 PSI is n
 
 ## Study Design: MechaCar vs Competition
 
-xxx
+How does the performance (MPG) of the Mecha car compare with the competition taking different independent variables listed in the sub heading into account? 
+
+#### Independent Variables
+
+* Horse Power (HP)
+
+* Number of Cylinders
+
+* Weight
+
+* Transmission Type
+
+* Car Shape
+
+* Car Type
+
+  
+
+#### Hypothesis
+
+The null hypothesis is that the MPG of the Mecha Car is not better than MPG of the competition
+
+The alternative hypothesis is that the MPG of the Mecha Car is better than MPG of the competition.
+
+#### Statistical Test
+
+The statistical test will be the Two Sample t-test and this will be used to check if there is a statistical difference between the distribution means from the samples of Mecha Car and the competition
+
+#### Data
+
+* Horse Power (HP)
+
+* Number of Cylinders
+
+* Weight
+
+* Transmission Type
+
+* Car Shape
+
+* Car Type
+
+  
